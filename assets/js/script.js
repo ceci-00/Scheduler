@@ -36,6 +36,7 @@ function logStart(){
     // past, present, and future classes? How can Day.js be used to get the
     // current hour in 24-hour time?
     
+    function timeBlockChange() {
     $('.time-block').each(function (){
     var eventHour = $(this).attr('id').split('-')[1]
     var currentHour = dayjs().hour()
@@ -47,8 +48,9 @@ function logStart(){
         } else if (currentHour > eventHour) {
             $(this).removeClass('future present').addClass('past')
         }     
-    })
-    setInterval(logStart, 1000);
+    })}
+    setInterval(today, 1000);
+    timeBlockChange();
 
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
