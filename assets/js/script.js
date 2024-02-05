@@ -48,7 +48,7 @@ function logStart(){
             $(this).removeClass('future present').addClass('past')
         }     
     })
- 
+    setInterval(logStart, 1000);
 
     // TODO: Add code to get any user input that was saved in localStorage and set
     // the values of the corresponding textarea elements. HINT: How can the id
